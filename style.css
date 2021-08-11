@@ -31,3 +31,7 @@ nav > .link > a > svg {
         display: none;
     }
 }
+
+.hidden {
+    display: none;
+}

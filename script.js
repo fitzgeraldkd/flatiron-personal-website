@@ -1,3 +1,12 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This content added by JavaScript";
-document.querySelector("body").appendChild(h2);
+function toggleSection(e) {
+    const sectionContent = e.target.nextElementSibling;
+    sectionContent.classList.toggle("hidden");
+    for (const sectionChevron of e.target.children) {
+        sectionChevron.classList.toggle("hidden");
+    }
+}
+
+const sections = document.getElementsByClassName("section-header");
+for (const section of sections) {
+    section.addEventListener("click", toggleSection)
+}
