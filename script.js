@@ -1,7 +1,15 @@
 function toggleSection(e) {
-    const sectionContent = e.target.nextElementSibling;
+    let section;
+    if (e.target.nodeName === "path") {
+        section = e.target.parentNode.parentNode;
+    } else if (e.target.nodeName === "svg") {
+        section = e.target.parentNode;
+    } else {
+        section = e.target;
+    }
+    const sectionContent = section.nextElementSibling;
     sectionContent.classList.toggle("hidden");
-    for (const sectionChevron of e.target.children) {
+    for (const sectionChevron of section.children) {
         sectionChevron.classList.toggle("hidden");
     }
 }
