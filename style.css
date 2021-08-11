@@ -1,3 +1,33 @@
 body {
-    background: blue;
+    font-family: sans-serif;
+}
+
+nav {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+nav > .link {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+nav > .link > a {
+    color: #555;
+    text-decoration: none;
+}
+
+nav > .link > a:hover {
+    color: #000;
+}
+
+nav > .link > a > svg {
+    vertical-align: bottom;
+}
+
+@media only screen and (max-width: 768px) {
+    nav > .link > a > span {
+        display: none;
+    }
 }
